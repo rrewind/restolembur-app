@@ -124,21 +124,21 @@ main {
 }
 
 /*
- * list
+ * explore
  */
 
-.list {
+.explore {
     width: 100%;
     margin: 60px auto;
     text-align: center;
 }
 
-.list_label {
+.explore_label {
     font-size: 32px;
     font-weight: lighter;
 }
 
-.list_label::after {
+.explore_label::after {
     content: '';
     margin-top: 16px;
     display: block;
@@ -149,7 +149,7 @@ main {
  * post
  */
 
-.list_resto {
+.lists {
     margin: 32px auto auto;
     text-align: left;
 }
