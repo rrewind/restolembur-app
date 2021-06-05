@@ -26,7 +26,7 @@ module.exports = {
         use: [
             'file-loader',
         ],
-    },
+      },
     ],
   },
   plugins: [
