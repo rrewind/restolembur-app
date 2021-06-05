@@ -3,37 +3,75 @@
     grid-row-gap: 16px;
 }
 
-@media screen and (max-width: 499px) {
-    .nav {
-        z-index: 10;
-        background-color: #fff;
-        width: 300px;
-        position: absolute;
+@media only screen and (max-width: 320px) {
+    nav {
+      padding: 1.5em 0.1em;
+    }
+  
+    .nav-item a {
+      font-size: 1.2em;
+    }
+  }
 
-        /* This trasform moves the drawer off canvas. */
-        -webkit-transform: translate(-300px, 0);
-        transform: translate(-300px, 0);
-
-        /* Optionally, we animate the drawer. */
-        transition: transform 0.3s ease;
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .menu {
+      display: block;
+      background-color: transparent;
+      border: 1px solid transparent;
+      text-align: center;
+    }
+  
+    .menu-hp {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+    .menu span {
+      text-align: center;
+      color: #000;
+    }
+  
+    nav {
+      display: flex;
+      flex-direction: column;
+      padding: 1.5em 1em;
+      flex-wrap: wrap;
+      align-items: flex-start;
+    }
+    .nav-list {
+      display: none;
+      position: fixed;
+      flex-direction: column;
+      align-items: flex-end;
+      width: 75%;
+      height: 100vh;
+      z-index: 9;
+      left: 0;
+      top: 0;
+      background-color: #fff;
+    }
+  
+    .nav-item a {
+      padding: 1.3em;
+    }
+  
+    .nav-item button {
+      padding: 1.8em;
+    }
+  
+    .nav-list-block {
+      display: flex;
     }
 
-    .open {
-        -webkit-transform: translate(0, 0);
-        transform: translate(0, 0);
-    }
-
-    .nav_item {
+    .open{
         display: list-item;
         border-bottom: 1px solid #E0E0E0;
         width: 100%;
         text-align: left;
     }
-}
-
-@media screen and (min-width: 455px) {
-    
-}
+  }
 
 @media screen and (min-width: 500px) {
     .header_menu {
@@ -61,13 +99,6 @@
         grid-template-columns: 1fr 1fr;
         grid-column-gap: 10px;
         grid-row-gap: 16px;
-    }
-}
-
-@media screen and (min-width: 800px) {
-    .nav_list {
-        max-width: 800px;
-        margin: 0 auto;
     }
 }
 

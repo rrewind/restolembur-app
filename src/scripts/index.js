@@ -1,11 +1,16 @@
 import 'regenerator-runtime'; /* for async await transpile */
 import '../styles/main.css';
 import '../styles/responsive.css'
+import App from './App';
 
-const menu = document.querySelector('#menu');
+const app = new App({
+    button: document.querySelector('.menu'),
+    drawer: document.querySelector('.nav-list'),
+    
+  });
+  
 const hero = document.querySelector('.hero');
 const main = document.querySelector('main');
-const drawer = document.querySelector('#drawer');
 
 menu.addEventListener('click', function (event) {
     drawer.classList.toggle('open');
