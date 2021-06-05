@@ -87,3 +87,104 @@ body {
     font-size: 18px;
     font-weight: 300;
 }
+
+/*
+ * main
+ */
+
+ main {
+    width: 100%;
+    margin: 0 auto;
+}
+
+/*
+ * content
+ */
+
+.content {
+    padding: 32px;
+}
+
+/*
+ * latest
+ */
+
+ .latest {
+    width: 100%;
+    margin: 60px auto;
+    text-align: center;
+}
+
+.latest__label {
+    font-size: 32px;
+    font-weight: lighter;
+}
+
+.latest__label::after {
+    content: '';
+    margin-top: 16px;
+    display: block;
+    border-bottom: 1px solid #eeeeee;
+}
+
+/*
+ * post
+ */
+
+.posts {
+    margin: 32px auto auto;
+    text-align: left;
+}
+
+/*
+ * post item
+ */
+
+.post-item {
+    margin: 16px 0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.post-item_content {
+    padding: 16px 32px 32px 32px;
+}
+
+.post-item_thumbnail {
+    width: 100%;
+}
+
+.post-item_date {
+    font-size: 10px;
+    text-transform: uppercase;
+    color: #999;
+}
+
+.post-item_date_author {
+    color: red;
+    text-decoration: none;
+}
+
+.post-item_title {
+    font-weight: 500;
+    font-size: 18px;
+    margin-top: 16px;
+    transition: 0.3s opacity;
+}
+
+.post-item_title:hover {
+    opacity: 0.5;
+}
+
+.post-item_title a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.post-item_description {
+    margin-top: 16px;
+    font-size: 14px;
+    line-height: 1.5em;
+}
