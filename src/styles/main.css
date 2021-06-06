@@ -205,17 +205,9 @@ main {
     margin: 0 auto;
 }
 
-/*
- * content
- */
-
 .content {
     padding: 32px;
 }
-
-/*
- * explore
- */
 
 .explore {
     width: 100%;
@@ -232,7 +224,7 @@ main {
     content: '';
     margin-top: 16px;
     display: block;
-    border-bottom: 1px solid #eeeeee;
+    border-bottom: 1px solid #c2c2c2;
 }
 
 /*
@@ -249,46 +241,88 @@ main {
  */
 
 .list-item {
-    margin: 16px 0;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     width: 100%;
-    border-radius: 5px;
-    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    border-radius: 1em;
+    cursor: pointer;
+    background-color: #000000;
 }
 
-.list-item_content {
-    padding: 16px 32px 32px 32px;
-}
+.img-container {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.5s ease;
+    max-height: 600px;
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+  }
+
+  .img-container::after {
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(210deg, #ddda1056 -3.77%, #1f1f0656 92.46%);
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+  }
+
+
 
 .list-item_thumbnail {
+    object-fit: cover;
+    height: 100%;
     width: 100%;
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
 }
 
-.list-item_date {
-    font-size: 10px;
-    text-transform: uppercase;
-    color: #999;
+.list-item_rating {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: large;
+    color: #fffb04;
+    background-color: #000000a8;
+    padding: 0.4em 1.3em;
+    border-bottom-left-radius: 1em;
+    z-index: 1;
+    border-top-right-radius: 0.891em;
 }
 
-.list-item_date_author {
+.list-iten_rating .fa{
+    font-size: smaller;
+    padding: 0.3em 0.8em 0.3em 0;
+}
+
+.list-item_city {
     color: red;
     text-decoration: none;
 }
 
 .list-item_title {
-    font-weight: 500;
-    font-size: 18px;
-    margin-top: 16px;
-    transition: 0.3s opacity;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: white;
+    font-size: large;
+    padding: 1em;
+    background-color: #000000a8;
+    width: 100%;
+    z-index: 1;
 }
 
 .list-item_title:hover {
     opacity: 0.5;
 }
 
-.list-item_title a {
-    text-decoration: none;
-    color: inherit;
+.list-item_content {
+    padding: 16px 32px 32px 32px;
 }
 
 .list-item_description {
@@ -297,6 +331,14 @@ main {
     line-height: 1.5em;
 }
 
+.truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    background-color: var(--primary-color);
+  }
 /*
  * footer
  */
