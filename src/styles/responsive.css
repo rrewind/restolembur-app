@@ -20,12 +20,12 @@
     transition: initial;
   }
   .navbar-brand {
-    font-size: xxx-large;
+    font-size: xx-large;
   }
 
   .nav-link {
     margin-left: 4rem;
-    font-size: 1.6rem;
+    font-size: large;
     transition: all 0.1s;
   }
   .menu-toggle {
