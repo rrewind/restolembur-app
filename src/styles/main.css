@@ -18,11 +18,124 @@ body {
 }
 
 /*
+ * Top Level Navigation *
+ */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 8rem;
+    padding: 0 2rem;
+    background-color: #000000;
+}
+  
+.navbar-brand {
+    color: #fffb04;
+    font-family: "Oswald", sans-serif;
+    font-size: xxx-large;
+    text-transform: uppercase;
+}
+  
+.nav-list {
+    list-style: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 100vh;
+    background-color: #000000;
+    padding: 4.4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    z-index: 1250;
+    text-transform: uppercase;
+    transform: translateX(-100%);
+    transition: transform 0.5s;
+}
+
+.nav-link {
+    color: #ffffff;
+    text-decoration: none;
+}
+  
+.nav-link:hover {
+    color: #fffb04;
+    border-bottom: 3px solid #fffb04;
+}
+  
+.active {
+    font-weight: 700;
+    color: #fffb04;
+    border-bottom: 3px solid #fffb04;
+}
+  
+.open .nav-list {
+    transform: translateX(0);
+}
+  
+.menu-toggle {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 3.2rem;
+    height: 3.2rem;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+  
+.hamburger {
+    width: 2.4rem;
+    height: 3px;
+    background-color: #fffffd;
+    border-radius: 2px;
+    border: none;
+    transition: all 0.7s ease-out;
+}
+  
+.hamburger::before,
+.hamburger::after {
+    content: "";
+    position: absolute;
+    width: 2.4rem;
+    height: 3px;
+    background-color: #ffffff;
+    border-radius: 2px;
+    border: none;
+}
+  
+.hamburger::before {
+    transform: translateY(-8px);
+}
+  
+.hamburger::after {
+    transform: translateY(8px);
+}
+
+.open .hamburger {
+    background: transparent;
+}
+  
+.open .hamburger::before {
+    transform-origin: (0, 0);
+    transform: rotate(45deg);
+}
+  
+.open .hamburger::after {
+    transform-origin: (0, 0);
+    transform: rotate(-45deg);
+}
+
+
+/*
  * Header
  *
  */
 
-.header {
+ .header {
     min-height: 56px;
     transition: min-height 0.3s;
 }
@@ -33,76 +146,6 @@ body {
     display: block;
     width: 30px;
 }
-
-
-nav {
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.3em 5em;
-    height: 75px;
-    font-family: 'Unica One', cursive;
-  }
-  
-  .menu {
-    font-size: 25px;
-    display: none;
-    padding: 0 0.3em;
-    color: #000;
-    background-color: #fff;
-  }
-  
-  .logo-font {
-    font-size: x-large;
-    font-weight: bold;
-    color: #000;
-    text-decoration: none;
-    padding: 0.378em 0.3em;
-  }
-  
-  .nav-list {
-    display: flex;
-    padding-left: 0;
-    margin-bottom: 0;
-    list-style: none;
-    flex-wrap: wrap;
-    transition: ease;
-    background-color: #fff;
-  }
-  
-  .nav-item {
-    box-sizing: border-box;
-    line-height: 24px;
-  }
-  
-  .nav-item a {
-    padding: 0.665rem;
-    display: inline-block;
-    font-size: 1.38em;
-    text-decoration: none;
-    color: #000;
-  }
-  
-  .nav-item button {
-    padding: 0.9265rem;
-    background-color: transparent;
-    border: 0 solid transparent;
-    color: #000;
-    cursor: pointer;
-    font-size: 1.38;
-    vertical-align: middle;
-  }
-  
-  .nav-item a:hover {
-    text-decoration: underline;
-  }
-  
-  .nav-item button:hover {
-    text-decoration: underline;
-  }
 
 /*
  * Jumbotron

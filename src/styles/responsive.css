@@ -3,103 +3,49 @@
     grid-row-gap: 16px;
 }
 
-@media only screen and (max-width: 320px) {
-    nav {
-      padding: 1.5em 0.1em;
-    }
-  
-    .nav-item a {
-      font-size: 1.2em;
-    }
-  }
-
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-    .menu {
-      display: block;
-      background-color: transparent;
-      border: 1px solid transparent;
-      text-align: center;
-    }
-  
-    .menu-hp {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      width: 100%;
-    }
-    .menu span {
-      text-align: center;
-      color: #000;
-    }
-  
-    nav {
-      display: flex;
-      flex-direction: column;
-      padding: 1.5em 1em;
-      flex-wrap: wrap;
-      align-items: flex-start;
-    }
-    .nav-list {
-      display: none;
-      position: fixed;
-      flex-direction: column;
-      align-items: flex-end;
-      width: 75%;
-      height: 100vh;
-      z-index: 9;
-      left: 0;
-      top: 0;
-      background-color: #fff;
-    }
-  
-    .nav-item a {
-      padding: 1.3em;
-    }
-  
-    .nav-item button {
-      padding: 1.8em;
-    }
-  
-    .nav-list-block {
-      display: flex;
-    }
-
-    .open{
-        display: list-item;
-        border-bottom: 1px solid #E0E0E0;
-        width: 100%;
-        text-align: left;
-    }
-  }
-
-@media screen and (min-width: 500px) {
-    .header_menu {
-        display: none;
-    }
-}
-
 @media screen and (min-width: 650px) {
-    .list-item_content {
-        padding: 16px 32px 32px 32px;
-    }
-
-    .list-item_title {
-        font-size: 18px;
-    }
-
-    .list-item_description {
-        font-size: 14px;
-    }
+    
 }
 
-@media screen and (min-width: 700px) {
-    .lists {
+@media screen and (min-width: 768px) {
+  .nav-list {
+    position: initial;
+    width: initial;
+    height: initial;
+    background-color: transparent;
+    padding: 0;
+    justify-content: initial;
+    flex-direction: row;
+    transform: initial;
+    transition: initial;
+  }
+  .nav-link {
+    margin-left: 4rem;
+    font-size: 1.6rem;
+    transition: all 0.1s;
+  }
+  .menu-toggle {
+    display: none;
+  }
+
+  .lists {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-column-gap: 10px;
         grid-row-gap: 16px;
-    }
+  }
+
+  .list-item_content {
+    padding: 16px 32px 32px 32px;
+  }
+
+  .list-item_title {
+    font-size: 18px;
+  }
+
+  .list-item_description {
+    font-size: 14px;
+  }
 }
 
 @media screen and (min-width: 900px) {
