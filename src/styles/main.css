@@ -211,7 +211,7 @@ main {
 
 .explore {
     width: 100%;
-    margin: 60px auto;
+    margin: 30px auto;
     text-align: center;
 }
 
@@ -328,6 +328,7 @@ main {
 .list-item_description {
     margin-top: 16px;
     font-size: 14px;
+    font-weight: bold;
     line-height: 1.5em;
 }
 
